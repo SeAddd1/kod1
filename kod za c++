@@ -1,0 +1,52 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+struct zaposlenik{;
+char ime[10];
+int godine;
+float plata;
+}zaposlenik1;
+
+
+int main()
+{
+    FILE *pokazivacFajla;
+    pokazivacFajla=fopen("trecic","w");
+
+    cout << "Unesi ime: " << endl;
+    cin >> zaposlenik1.ime;
+    cout << "Unesi godine: " << endl;
+    cin >> zaposlenik1.godine;
+    cout << "Unesi platu: " << endl;
+    cin >> zaposlenik1.plata;
+
+    fprintf(pokazivacFajla, "%s", zaposlenik1.ime);
+
+    fprintf(pokazivacFajla, " %i", zaposlenik1.godine);
+
+    fprintf(pokazivacFajla, " %f", zaposlenik1.plata);
+    fclose(pokazivacFajla);
+
+    pokazivacFajla=fopen("trecic","r";
+
+   while(feof(pokazivacFajla))
+    {
+        fscanf(pokazivacFajla, "%s", zaposlenik1.ime);
+        fscanf(pokazivacFajla, "%i", zaposlenik1.godine);
+        fscanf(pokazivacFajla, "%f", zaposlenik1.plata);
+    }
+
+    ;
+
+    cout << "U nasem fajlu se nalaze podaci: " << endl;
+    cout << zaposlenik1.ime << endl;
+    cout << zaposlenik1.godine << endl;
+    cout << zaposlenik1.plata << endl;
+
+    fclose(pokazivacFajla);
+
+
+    return 0;
+}
